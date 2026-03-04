@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Sports Records & Rankings</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .league-section {
+            margin-bottom: 35px;
+        }
+        
+        .league-title {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            border-left: 5px solid;
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0;
+        }
+        
+        .league-section.nfl .league-title { border-left-color: #003d7a; }
+        .league-section.nba .league-title { border-left-color: #1d428a; }
+        .league-section.mlb .league-title { border-left-color: #12130f; }
+        .league-section.nhl .league-title { border-left-color: #000; }
+        .league-section.tennis-men .league-title { border-left-color: #00a651; }
+        .league-section.tennis-women .league-title { border-left-color: #d61e3e; }
+        .league-section.ncaam .league-title { border-left-color: #0066cc; }
+        .league-section.ncaafb .league-title { border-left-color: #663300; }
+        .league-section.nascar .league-title { border-left-color: #ffcc00; }
+        .league-section.mls .league-title { border-left-color: #3d195b; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+            border-radius: 0 0 8px 8px;
+            overflow: hidden;
+        }
+        
+        thead {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        tbody tr:hover {
+            background-color: #f8f9fa;
+            transition: background-color 0.2s ease;
+        }
+        
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .team-name {
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .stat {
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .wins {
+            color: #27ae60;
+        }
+        
+        .losses {
+            color: #e74c3c;
+        }
+        
+        .draws {
+            color: #f39c12;
+        }
+        
+        .points {
+            color: #2980b9;
+        }
+        
+        .win-pct {
+            background: #f0f0f0;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            padding: 20px;
+            opacity: 0.9;
+        }
+        
+        .summary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 0.95em;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            th, td {
+                padding: 10px 8px;
+                font-size: 0.85em;
+            }
+            
+            .league-title {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏆 Comprehensive Sports Database</h1>
+            <p>Professional & College Sports • International Rankings</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">NFL • NBA • MLB • NHL • Tennis • College Basketball • College Football • NASCAR • MLS</p>
+            <p style="font-size: 0.85em; opacity: 0.9; margin-top: 5px;">Updated: March 04, 2026 at 02:04 PM</p>
+        </div>
+
+        <div class="league-section mls">
+            <h2 class="league-title">⚽ Major League Soccer</h2>
+            <div class="summary">20 entries</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Draws</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="stat">1</td>
+                        <td class="team-name">San Diego FC</td>
+                        <td class="stat wins">2</td>
+                        <td class="stat losses">0</td>
+                        <td class="stat draws">0</td>
+                        <td class="stat points">6</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">2</td>
+                        <td class="team-name">Los Angeles FC</td>
+                        <td class="stat wins">2</td>
+                        <td class="stat losses">0</td>
+                        <td class="stat draws">0</td>
+                        <td class="stat points">6</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">3</td>
+                        <td class="team-name">San Jose Earthquakes</td>
+                        <td class="stat wins">2</td>
+                        <td class="stat losses">0</td>
+                        <td class="stat draws">0</td>
+                        <td class="stat points">6</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">4</td>
+                        <td class="team-name">Vancouver Whitecaps FC</td>
+                        <td class="stat wins">2</td>
+                        <td class="stat losses">0</td>
+                        <td class="stat draws">0</td>
+                        <td class="stat points">6</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">5</td>
+                        <td class="team-name">New York Red Bulls</td>
+                        <td class="stat wins">2</td>
+                        <td class="stat losses">0</td>
+                        <td class="stat draws">0</td>
+                        <td class="stat points">6</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">6</td>
+                        <td class="team-name">Los Angeles Galaxy</td>
+                        <td class="stat wins">1</td>
+                        <td class="stat losses">0</td>
+                        <td class="stat draws">1</td>
+                        <td class="stat points">4</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">7</td>
+                        <td class="team-name">Nashville SC</td>
+                        <td class="stat wins">1</td>
+                        <td class="stat losses">0</td>
+                        <td class="stat draws">1</td>
+                        <td class="stat points">4</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">8</td>
+                        <td class="team-name">Austin FC</td>
+                        <td class="stat wins">1</td>
+                        <td class="stat losses">0</td>
+                        <td class="stat draws">1</td>
+                        <td class="stat points">4</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">9</td>
+                        <td class="team-name">FC Dallas</td>
+                        <td class="stat wins">1</td>
+                        <td class="stat losses">0</td>
+                        <td class="stat draws">1</td>
+                        <td class="stat points">4</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">10</td>
+                        <td class="team-name">Minnesota United FC</td>
+                        <td class="stat wins">1</td>
+                        <td class="stat losses">0</td>
+                        <td class="stat draws">1</td>
+                        <td class="stat points">4</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">11</td>
+                        <td class="team-name">New York City FC</td>
+                        <td class="stat wins">1</td>
+                        <td class="stat losses">0</td>
+                        <td class="stat draws">1</td>
+                        <td class="stat points">4</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">12</td>
+                        <td class="team-name">Chicago Fire</td>
+                        <td class="stat wins">1</td>
+                        <td class="stat losses">1</td>
+                        <td class="stat draws">0</td>
+                        <td class="stat points">3</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">13</td>
+                        <td class="team-name">Seattle Sounders</td>
+                        <td class="stat wins">1</td>
+                        <td class="stat losses">1</td>
+                        <td class="stat draws">0</td>
+                        <td class="stat points">3</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">14</td>
+                        <td class="team-name">FC Cincinnati</td>
+                        <td class="stat wins">1</td>
+                        <td class="stat losses">1</td>
+                        <td class="stat draws">0</td>
+                        <td class="stat points">3</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">15</td>
+                        <td class="team-name">Colorado Rapids</td>
+                        <td class="stat wins">1</td>
+                        <td class="stat losses">1</td>
+                        <td class="stat draws">0</td>
+                        <td class="stat points">3</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">16</td>
+                        <td class="team-name">Real Salt Lake</td>
+                        <td class="stat wins">1</td>
+                        <td class="stat losses">1</td>
+                        <td class="stat draws">0</td>
+                        <td class="stat points">3</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">17</td>
+                        <td class="team-name">DC United</td>
+                        <td class="stat wins">1</td>
+                        <td class="stat losses">1</td>
+                        <td class="stat draws">0</td>
+                        <td class="stat points">3</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">18</td>
+                        <td class="team-name">Inter Miami CF</td>
+                        <td class="stat wins">1</td>
+                        <td class="stat losses">1</td>
+                        <td class="stat draws">0</td>
+                        <td class="stat points">3</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">19</td>
+                        <td class="team-name">Portland Timbers</td>
+                        <td class="stat wins">1</td>
+                        <td class="stat losses">1</td>
+                        <td class="stat draws">0</td>
+                        <td class="stat points">3</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">20</td>
+                        <td class="team-name">Houston Dynamo</td>
+                        <td class="stat wins">1</td>
+                        <td class="stat losses">1</td>
+                        <td class="stat draws">0</td>
+                        <td class="stat points">3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="league-section nascar">
+            <h2 class="league-title">🏁 NASCAR Cup Series</h2>
+            <div class="summary">15 entries</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Wins</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="stat">1</td>
+                        <td class="team-name">Tyler Reddick</td>
+                        <td class="stat wins">3</td>
+                        <td class="stat points">186</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">2</td>
+                        <td class="team-name">Bubba Wallace</td>
+                        <td class="stat wins">0</td>
+                        <td class="stat points">116</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">3</td>
+                        <td class="team-name">Chase Elliott</td>
+                        <td class="stat wins">0</td>
+                        <td class="stat points">114</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">4</td>
+                        <td class="team-name">Ryan Blaney</td>
+                        <td class="stat wins">0</td>
+                        <td class="stat points">100</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">5</td>
+                        <td class="team-name">Shane Van Gisbergen</td>
+                        <td class="stat wins">0</td>
+                        <td class="stat points">90</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">6</td>
+                        <td class="team-name">Joey Logano</td>
+                        <td class="stat wins">0</td>
+                        <td class="stat points">90</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">7</td>
+                        <td class="team-name">Daniel Suárez</td>
+                        <td class="stat wins">0</td>
+                        <td class="stat points">87</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">8</td>
+                        <td class="team-name">AJ Allmendinger</td>
+                        <td class="stat wins">0</td>
+                        <td class="stat points">86</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">9</td>
+                        <td class="team-name">Michael McDowell</td>
+                        <td class="stat wins">0</td>
+                        <td class="stat points">83</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">10</td>
+                        <td class="team-name">Carson Hocevar</td>
+                        <td class="stat wins">0</td>
+                        <td class="stat points">82</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">11</td>
+                        <td class="team-name">Chris Buescher</td>
+                        <td class="stat wins">0</td>
+                        <td class="stat points">81</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">12</td>
+                        <td class="team-name">Brad Keselowski</td>
+                        <td class="stat wins">0</td>
+                        <td class="stat points">78</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">13</td>
+                        <td class="team-name">William Byron</td>
+                        <td class="stat wins">0</td>
+                        <td class="stat points">76</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">14</td>
+                        <td class="team-name">Zane Smith</td>
+                        <td class="stat wins">0</td>
+                        <td class="stat points">75</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">15</td>
+                        <td class="team-name">Kyle Larson</td>
+                        <td class="stat wins">0</td>
+                        <td class="stat points">73</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="league-section nba">
+            <h2 class="league-title">🏀 National Basketball Association</h2>
+            <div class="summary">30 entries</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Win %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="stat">1</td>
+                        <td class="team-name">Detroit Pistons</td>
+                        <td class="stat wins">45</td>
+                        <td class="stat losses">15</td>
+                        <td class="stat win-pct">75.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">2</td>
+                        <td class="team-name">Oklahoma City Thunder</td>
+                        <td class="stat wins">48</td>
+                        <td class="stat losses">15</td>
+                        <td class="stat win-pct">76.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">3</td>
+                        <td class="team-name">Cleveland Cavaliers</td>
+                        <td class="stat wins">39</td>
+                        <td class="stat losses">24</td>
+                        <td class="stat win-pct">61.9%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">4</td>
+                        <td class="team-name">Milwaukee Bucks</td>
+                        <td class="stat wins">26</td>
+                        <td class="stat losses">34</td>
+                        <td class="stat win-pct">43.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">5</td>
+                        <td class="team-name">Chicago Bulls</td>
+                        <td class="stat wins">25</td>
+                        <td class="stat losses">37</td>
+                        <td class="stat win-pct">40.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">6</td>
+                        <td class="team-name">Indiana Pacers</td>
+                        <td class="stat wins">15</td>
+                        <td class="stat losses">46</td>
+                        <td class="stat win-pct">24.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">7</td>
+                        <td class="team-name">Orlando Magic</td>
+                        <td class="stat wins">32</td>
+                        <td class="stat losses">28</td>
+                        <td class="stat win-pct">53.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">8</td>
+                        <td class="team-name">Miami Heat</td>
+                        <td class="stat wins">33</td>
+                        <td class="stat losses">29</td>
+                        <td class="stat win-pct">53.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">9</td>
+                        <td class="team-name">Charlotte Hornets</td>
+                        <td class="stat wins">31</td>
+                        <td class="stat losses">31</td>
+                        <td class="stat win-pct">50.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">10</td>
+                        <td class="team-name">Atlanta Hawks</td>
+                        <td class="stat wins">31</td>
+                        <td class="stat losses">31</td>
+                        <td class="stat win-pct">50.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">11</td>
+                        <td class="team-name">Washington Wizards</td>
+                        <td class="stat wins">16</td>
+                        <td class="stat losses">45</td>
+                        <td class="stat win-pct">26.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">12</td>
+                        <td class="team-name">Boston Celtics</td>
+                        <td class="stat wins">41</td>
+                        <td class="stat losses">20</td>
+                        <td class="stat win-pct">67.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">13</td>
+                        <td class="team-name">New York Knicks</td>
+                        <td class="stat wins">40</td>
+                        <td class="stat losses">22</td>
+                        <td class="stat win-pct">64.5%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">14</td>
+                        <td class="team-name">Toronto Raptors</td>
+                        <td class="stat wins">35</td>
+                        <td class="stat losses">26</td>
+                        <td class="stat win-pct">57.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">15</td>
+                        <td class="team-name">Philadelphia 76ers</td>
+                        <td class="stat wins">33</td>
+                        <td class="stat losses">28</td>
+                        <td class="stat win-pct">54.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">16</td>
+                        <td class="team-name">Brooklyn Nets</td>
+                        <td class="stat wins">15</td>
+                        <td class="stat losses">46</td>
+                        <td class="stat win-pct">24.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">17</td>
+                        <td class="team-name">Los Angeles Lakers</td>
+                        <td class="stat wins">37</td>
+                        <td class="stat losses">24</td>
+                        <td class="stat win-pct">60.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">18</td>
+                        <td class="team-name">Phoenix Suns</td>
+                        <td class="stat wins">35</td>
+                        <td class="stat losses">26</td>
+                        <td class="stat win-pct">57.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">19</td>
+                        <td class="team-name">Golden State Warriors</td>
+                        <td class="stat wins">31</td>
+                        <td class="stat losses">30</td>
+                        <td class="stat win-pct">50.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">20</td>
+                        <td class="team-name">LA Clippers</td>
+                        <td class="stat wins">29</td>
+                        <td class="stat losses">31</td>
+                        <td class="stat win-pct">48.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">21</td>
+                        <td class="team-name">Sacramento Kings</td>
+                        <td class="stat wins">14</td>
+                        <td class="stat losses">49</td>
+                        <td class="stat win-pct">22.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">22</td>
+                        <td class="team-name">San Antonio Spurs</td>
+                        <td class="stat wins">44</td>
+                        <td class="stat losses">17</td>
+                        <td class="stat win-pct">72.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">23</td>
+                        <td class="team-name">Houston Rockets</td>
+                        <td class="stat wins">38</td>
+                        <td class="stat losses">22</td>
+                        <td class="stat win-pct">63.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">24</td>
+                        <td class="team-name">Memphis Grizzlies</td>
+                        <td class="stat wins">23</td>
+                        <td class="stat losses">37</td>
+                        <td class="stat win-pct">38.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">25</td>
+                        <td class="team-name">Dallas Mavericks</td>
+                        <td class="stat wins">21</td>
+                        <td class="stat losses">40</td>
+                        <td class="stat win-pct">34.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">26</td>
+                        <td class="team-name">New Orleans Pelicans</td>
+                        <td class="stat wins">19</td>
+                        <td class="stat losses">44</td>
+                        <td class="stat win-pct">30.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">27</td>
+                        <td class="team-name">Denver Nuggets</td>
+                        <td class="stat wins">38</td>
+                        <td class="stat losses">24</td>
+                        <td class="stat win-pct">61.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">28</td>
+                        <td class="team-name">Minnesota Timberwolves</td>
+                        <td class="stat wins">39</td>
+                        <td class="stat losses">23</td>
+                        <td class="stat win-pct">62.9%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">29</td>
+                        <td class="team-name">Portland Trail Blazers</td>
+                        <td class="stat wins">29</td>
+                        <td class="stat losses">33</td>
+                        <td class="stat win-pct">46.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">30</td>
+                        <td class="team-name">Utah Jazz</td>
+                        <td class="stat wins">18</td>
+                        <td class="stat losses">43</td>
+                        <td class="stat win-pct">29.5%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="league-section ncaafb">
+            <h2 class="league-title">🏈 NCAA Football</h2>
+            <div class="summary">15 entries</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Win %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="stat">1</td>
+                        <td class="team-name">Texas Tech Red Raiders</td>
+                        <td class="stat wins">12</td>
+                        <td class="stat losses">2</td>
+                        <td class="stat win-pct">85.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">2</td>
+                        <td class="team-name">BYU Cougars</td>
+                        <td class="stat wins">12</td>
+                        <td class="stat losses">2</td>
+                        <td class="stat win-pct">85.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">3</td>
+                        <td class="team-name">Utah Utes</td>
+                        <td class="stat wins">11</td>
+                        <td class="stat losses">2</td>
+                        <td class="stat win-pct">84.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">4</td>
+                        <td class="team-name">Houston Cougars</td>
+                        <td class="stat wins">10</td>
+                        <td class="stat losses">3</td>
+                        <td class="stat win-pct">76.9%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">5</td>
+                        <td class="team-name">Arizona Wildcats</td>
+                        <td class="stat wins">9</td>
+                        <td class="stat losses">4</td>
+                        <td class="stat win-pct">69.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">6</td>
+                        <td class="team-name">TCU Horned Frogs</td>
+                        <td class="stat wins">9</td>
+                        <td class="stat losses">4</td>
+                        <td class="stat win-pct">69.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">7</td>
+                        <td class="team-name">Iowa State Cyclones</td>
+                        <td class="stat wins">8</td>
+                        <td class="stat losses">4</td>
+                        <td class="stat win-pct">66.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">8</td>
+                        <td class="team-name">Arizona State Sun Devils</td>
+                        <td class="stat wins">8</td>
+                        <td class="stat losses">5</td>
+                        <td class="stat win-pct">61.5%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">9</td>
+                        <td class="team-name">Notre Dame Fighting Irish</td>
+                        <td class="stat wins">10</td>
+                        <td class="stat losses">2</td>
+                        <td class="stat win-pct">83.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">10</td>
+                        <td class="team-name">Indiana Hoosiers</td>
+                        <td class="stat wins">16</td>
+                        <td class="stat losses">0</td>
+                        <td class="stat win-pct">100.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">11</td>
+                        <td class="team-name">Georgia Bulldogs</td>
+                        <td class="stat wins">12</td>
+                        <td class="stat losses">2</td>
+                        <td class="stat win-pct">85.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">12</td>
+                        <td class="team-name">Ohio State Buckeyes</td>
+                        <td class="stat wins">12</td>
+                        <td class="stat losses">2</td>
+                        <td class="stat win-pct">85.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">13</td>
+                        <td class="team-name">Miami Hurricanes</td>
+                        <td class="stat wins">13</td>
+                        <td class="stat losses">3</td>
+                        <td class="stat win-pct">81.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">14</td>
+                        <td class="team-name">Ole Miss Rebels</td>
+                        <td class="stat wins">13</td>
+                        <td class="stat losses">2</td>
+                        <td class="stat win-pct">86.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">15</td>
+                        <td class="team-name">Texas A&M Aggies</td>
+                        <td class="stat wins">11</td>
+                        <td class="stat losses">2</td>
+                        <td class="stat win-pct">84.6%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="league-section ncaam">
+            <h2 class="league-title">🏀 NCAA Men's Basketball</h2>
+            <div class="summary">15 entries</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Win %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="stat">1</td>
+                        <td class="team-name">Michigan Wolverines</td>
+                        <td class="stat wins">27</td>
+                        <td class="stat losses">2</td>
+                        <td class="stat win-pct">93.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">2</td>
+                        <td class="team-name">Nebraska Cornhuskers</td>
+                        <td class="stat wins">25</td>
+                        <td class="stat losses">5</td>
+                        <td class="stat win-pct">83.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">3</td>
+                        <td class="team-name">Michigan State Spartans</td>
+                        <td class="stat wins">24</td>
+                        <td class="stat losses">5</td>
+                        <td class="stat win-pct">82.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">4</td>
+                        <td class="team-name">Illinois Fighting Illini</td>
+                        <td class="stat wins">23</td>
+                        <td class="stat losses">7</td>
+                        <td class="stat win-pct">76.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">5</td>
+                        <td class="team-name">Purdue Boilermakers</td>
+                        <td class="stat wins">22</td>
+                        <td class="stat losses">7</td>
+                        <td class="stat win-pct">75.9%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">6</td>
+                        <td class="team-name">Wisconsin Badgers</td>
+                        <td class="stat wins">20</td>
+                        <td class="stat losses">9</td>
+                        <td class="stat win-pct">69.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">7</td>
+                        <td class="team-name">Iowa Hawkeyes</td>
+                        <td class="stat wins">20</td>
+                        <td class="stat losses">9</td>
+                        <td class="stat win-pct">69.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">8</td>
+                        <td class="team-name">UCLA Bruins</td>
+                        <td class="stat wins">20</td>
+                        <td class="stat losses">10</td>
+                        <td class="stat win-pct">66.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">9</td>
+                        <td class="team-name">Ohio State Buckeyes</td>
+                        <td class="stat wins">18</td>
+                        <td class="stat losses">11</td>
+                        <td class="stat win-pct">62.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">10</td>
+                        <td class="team-name">USC Trojans</td>
+                        <td class="stat wins">18</td>
+                        <td class="stat losses">11</td>
+                        <td class="stat win-pct">62.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">11</td>
+                        <td class="team-name">UConn Huskies</td>
+                        <td class="stat wins">27</td>
+                        <td class="stat losses">3</td>
+                        <td class="stat win-pct">90.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">12</td>
+                        <td class="team-name">Duke Blue Devils</td>
+                        <td class="stat wins">28</td>
+                        <td class="stat losses">2</td>
+                        <td class="stat win-pct">93.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">13</td>
+                        <td class="team-name">Virginia Cavaliers</td>
+                        <td class="stat wins">26</td>
+                        <td class="stat losses">4</td>
+                        <td class="stat win-pct">86.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">14</td>
+                        <td class="team-name">Gonzaga Bulldogs</td>
+                        <td class="stat wins">28</td>
+                        <td class="stat losses">3</td>
+                        <td class="stat win-pct">90.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">15</td>
+                        <td class="team-name">Arizona Wildcats</td>
+                        <td class="stat wins">28</td>
+                        <td class="stat losses">2</td>
+                        <td class="stat win-pct">93.3%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="league-section nfl">
+            <h2 class="league-title">🏈 National Football League</h2>
+            <div class="summary">32 entries</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Win %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="stat">1</td>
+                        <td class="team-name">Seattle Seahawks</td>
+                        <td class="stat wins">14</td>
+                        <td class="stat losses">3</td>
+                        <td class="stat win-pct">82.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">2</td>
+                        <td class="team-name">Denver Broncos</td>
+                        <td class="stat wins">14</td>
+                        <td class="stat losses">3</td>
+                        <td class="stat win-pct">82.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">3</td>
+                        <td class="team-name">New England Patriots</td>
+                        <td class="stat wins">14</td>
+                        <td class="stat losses">3</td>
+                        <td class="stat win-pct">82.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">4</td>
+                        <td class="team-name">Jacksonville Jaguars</td>
+                        <td class="stat wins">13</td>
+                        <td class="stat losses">4</td>
+                        <td class="stat win-pct">76.5%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">5</td>
+                        <td class="team-name">Los Angeles Rams</td>
+                        <td class="stat wins">12</td>
+                        <td class="stat losses">5</td>
+                        <td class="stat win-pct">70.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">6</td>
+                        <td class="team-name">San Francisco 49ers</td>
+                        <td class="stat wins">12</td>
+                        <td class="stat losses">5</td>
+                        <td class="stat win-pct">70.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">7</td>
+                        <td class="team-name">Philadelphia Eagles</td>
+                        <td class="stat wins">11</td>
+                        <td class="stat losses">6</td>
+                        <td class="stat win-pct">64.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">8</td>
+                        <td class="team-name">Chicago Bears</td>
+                        <td class="stat wins">11</td>
+                        <td class="stat losses">6</td>
+                        <td class="stat win-pct">64.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">9</td>
+                        <td class="team-name">Los Angeles Chargers</td>
+                        <td class="stat wins">11</td>
+                        <td class="stat losses">6</td>
+                        <td class="stat win-pct">64.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">10</td>
+                        <td class="team-name">Buffalo Bills</td>
+                        <td class="stat wins">12</td>
+                        <td class="stat losses">5</td>
+                        <td class="stat win-pct">70.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">11</td>
+                        <td class="team-name">Houston Texans</td>
+                        <td class="stat wins">12</td>
+                        <td class="stat losses">5</td>
+                        <td class="stat win-pct">70.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">12</td>
+                        <td class="team-name">Pittsburgh Steelers</td>
+                        <td class="stat wins">10</td>
+                        <td class="stat losses">7</td>
+                        <td class="stat win-pct">58.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">13</td>
+                        <td class="team-name">Indianapolis Colts</td>
+                        <td class="stat wins">8</td>
+                        <td class="stat losses">9</td>
+                        <td class="stat win-pct">47.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">14</td>
+                        <td class="team-name">Minnesota Vikings</td>
+                        <td class="stat wins">9</td>
+                        <td class="stat losses">8</td>
+                        <td class="stat win-pct">52.9%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">15</td>
+                        <td class="team-name">Green Bay Packers</td>
+                        <td class="stat wins">9</td>
+                        <td class="stat losses">7</td>
+                        <td class="stat win-pct">56.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">16</td>
+                        <td class="team-name">Detroit Lions</td>
+                        <td class="stat wins">9</td>
+                        <td class="stat losses">8</td>
+                        <td class="stat win-pct">52.9%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">17</td>
+                        <td class="team-name">Tampa Bay Buccaneers</td>
+                        <td class="stat wins">8</td>
+                        <td class="stat losses">9</td>
+                        <td class="stat win-pct">47.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">18</td>
+                        <td class="team-name">Atlanta Falcons</td>
+                        <td class="stat wins">8</td>
+                        <td class="stat losses">9</td>
+                        <td class="stat win-pct">47.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">19</td>
+                        <td class="team-name">Carolina Panthers</td>
+                        <td class="stat wins">8</td>
+                        <td class="stat losses">9</td>
+                        <td class="stat win-pct">47.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">20</td>
+                        <td class="team-name">Baltimore Ravens</td>
+                        <td class="stat wins">8</td>
+                        <td class="stat losses">9</td>
+                        <td class="stat win-pct">47.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">21</td>
+                        <td class="team-name">Miami Dolphins</td>
+                        <td class="stat wins">7</td>
+                        <td class="stat losses">10</td>
+                        <td class="stat win-pct">41.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">22</td>
+                        <td class="team-name">New Orleans Saints</td>
+                        <td class="stat wins">6</td>
+                        <td class="stat losses">11</td>
+                        <td class="stat win-pct">35.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">23</td>
+                        <td class="team-name">Washington Commanders</td>
+                        <td class="stat wins">5</td>
+                        <td class="stat losses">12</td>
+                        <td class="stat win-pct">29.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">24</td>
+                        <td class="team-name">Dallas Cowboys</td>
+                        <td class="stat wins">7</td>
+                        <td class="stat losses">9</td>
+                        <td class="stat win-pct">43.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">25</td>
+                        <td class="team-name">Cincinnati Bengals</td>
+                        <td class="stat wins">6</td>
+                        <td class="stat losses">11</td>
+                        <td class="stat win-pct">35.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">26</td>
+                        <td class="team-name">Cleveland Browns</td>
+                        <td class="stat wins">5</td>
+                        <td class="stat losses">12</td>
+                        <td class="stat win-pct">29.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">27</td>
+                        <td class="team-name">Kansas City Chiefs</td>
+                        <td class="stat wins">6</td>
+                        <td class="stat losses">11</td>
+                        <td class="stat win-pct">35.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">28</td>
+                        <td class="team-name">New York Jets</td>
+                        <td class="stat wins">3</td>
+                        <td class="stat losses">14</td>
+                        <td class="stat win-pct">17.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">29</td>
+                        <td class="team-name">Las Vegas Raiders</td>
+                        <td class="stat wins">3</td>
+                        <td class="stat losses">14</td>
+                        <td class="stat win-pct">17.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">30</td>
+                        <td class="team-name">Tennessee Titans</td>
+                        <td class="stat wins">3</td>
+                        <td class="stat losses">14</td>
+                        <td class="stat win-pct">17.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">31</td>
+                        <td class="team-name">New York Giants</td>
+                        <td class="stat wins">4</td>
+                        <td class="stat losses">13</td>
+                        <td class="stat win-pct">23.5%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">32</td>
+                        <td class="team-name">Arizona Cardinals</td>
+                        <td class="stat wins">3</td>
+                        <td class="stat losses">14</td>
+                        <td class="stat win-pct">17.6%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="league-section tennis-men">
+            <h2 class="league-title">🎾 Tennis - Men's Rankings (ATP)</h2>
+            <div class="summary">10 entries</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="stat">1</td>
+                        <td class="team-name">Carlos Alcaraz</td>
+                        <td class="stat points">13,550</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">2</td>
+                        <td class="team-name">Jannik Sinner</td>
+                        <td class="stat points">10,400</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">3</td>
+                        <td class="team-name">Novak Djokovic</td>
+                        <td class="stat points">5,280</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">4</td>
+                        <td class="team-name">Alexander Zverev</td>
+                        <td class="stat points">4,555</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">5</td>
+                        <td class="team-name">Lorenzo Musetti</td>
+                        <td class="stat points">4,405</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">6</td>
+                        <td class="team-name">Alex de Minaur</td>
+                        <td class="stat points">4,235</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">7</td>
+                        <td class="team-name">Taylor Fritz</td>
+                        <td class="stat points">4,220</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">8</td>
+                        <td class="team-name">Ben Shelton</td>
+                        <td class="stat points">4,010</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">9</td>
+                        <td class="team-name">Felix Auger-Aliassime</td>
+                        <td class="stat points">3,950</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">10</td>
+                        <td class="team-name">Alexander Bublik</td>
+                        <td class="stat points">3,405</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="league-section tennis-women">
+            <h2 class="league-title">🎾 Tennis - Women's Rankings (WTA)</h2>
+            <div class="summary">10 entries</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="stat">1</td>
+                        <td class="team-name">Aryna Sabalenka</td>
+                        <td class="stat points">10,675</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">2</td>
+                        <td class="team-name">Iga Swiatek</td>
+                        <td class="stat points">7,588</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">3</td>
+                        <td class="team-name">Elena Rybakina</td>
+                        <td class="stat points">7,253</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">4</td>
+                        <td class="team-name">Coco Gauff</td>
+                        <td class="stat points">6,803</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">5</td>
+                        <td class="team-name">Jessica Pegula</td>
+                        <td class="stat points">6,583</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">6</td>
+                        <td class="team-name">Amanda Anisimova</td>
+                        <td class="stat points">6,070</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">7</td>
+                        <td class="team-name">Jasmine Paolini</td>
+                        <td class="stat points">4,232</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">8</td>
+                        <td class="team-name">Mirra Andreeva</td>
+                        <td class="stat points">4,001</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">9</td>
+                        <td class="team-name">Elina Svitolina</td>
+                        <td class="stat points">3,845</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">10</td>
+                        <td class="team-name">Victoria Mboko</td>
+                        <td class="stat points">3,211</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>🏆 Comprehensive Sports Rankings Database</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">Data provided by SportRadar API • All times in EST</p>
+        </div>
+    </div>
+</body>
+</html>
