@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Sports Records & Rankings</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .hero-image-small {
+            margin: 20px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            width: 100%;
+        }
+        
+        .hero-image-small img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subheader {
+            font-size: 1.2em;
+            font-style: italic;
+            margin-bottom: 10px;
+            opacity: 0.95;
+        }
+        
+        .league-section {
+            margin-bottom: 35px;
+        }
+        
+        .league-title {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            border-left: 5px solid;
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0;
+        }
+        
+        .league-section.nfl .league-title { border-left-color: #003d7a; }
+        .league-section.nba .league-title { border-left-color: #1d428a; }
+        .league-section.mlb .league-title { border-left-color: #12130f; }
+        .league-section.nhl .league-title { border-left-color: #000; }
+        .league-section.tennis-men .league-title { border-left-color: #00a651; }
+        .league-section.tennis-women .league-title { border-left-color: #d61e3e; }
+        .league-section.ncaam .league-title { border-left-color: #0066cc; }
+        .league-section.ncaafb .league-title { border-left-color: #663300; }
+        .league-section.nascar .league-title { border-left-color: #ffcc00; }
+        .league-section.mls .league-title { border-left-color: #3d195b; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+            border-radius: 0 0 8px 8px;
+            overflow: hidden;
+        }
+        
+        thead {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        tbody tr:hover {
+            background-color: #f8f9fa;
+            transition: background-color 0.2s ease;
+        }
+        
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .team-name {
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .stat {
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .wins {
+            color: #27ae60;
+        }
+        
+        .losses {
+            color: #e74c3c;
+        }
+        
+        .draws {
+            color: #f39c12;
+        }
+        
+        .points {
+            color: #2980b9;
+        }
+        
+        .win-pct {
+            background: #f0f0f0;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            padding: 20px;
+            opacity: 0.9;
+        }
+        
+        .summary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 0.95em;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            th, td {
+                padding: 10px 8px;
+                font-size: 0.85em;
+            }
+            
+            .league-title {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Fantasy Life</h1>
+            
+            <div class="hero-image-small">
+                <img src="IMG_2832.jpg" alt="Football Player Celebration">
+            </div>
+            
+            <p class="subheader">"Go then, Scott" - Buckley Chopping Wood</p>
+            <p style="font-size: 0.85em; opacity: 0.9; margin-top: 15px;">Updated: March 04, 2026 at 08:44 PM</p>
+        </div>
+
+        <div class="league-section gdp">
+            <h2 class="league-title">💰 2026 GDP Growth by Country - Top 25</h2>
+            <div class="summary">25 entries</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>2026 Growth %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="stat">1</td>
+                        <td class="team-name">Guyana</td>
+                        <td class="stat">18.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">2</td>
+                        <td class="team-name">Mauritius</td>
+                        <td class="stat">9.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">3</td>
+                        <td class="team-name">India</td>
+                        <td class="stat">7.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">4</td>
+                        <td class="team-name">Bangladesh</td>
+                        <td class="stat">6.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">5</td>
+                        <td class="team-name">Vietnam</td>
+                        <td class="stat">6.5%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">6</td>
+                        <td class="team-name">Philippines</td>
+                        <td class="stat">6.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">7</td>
+                        <td class="team-name">Indonesia</td>
+                        <td class="stat">5.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">8</td>
+                        <td class="team-name">Nigeria</td>
+                        <td class="stat">5.5%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">9</td>
+                        <td class="team-name">Egypt</td>
+                        <td class="stat">5.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">10</td>
+                        <td class="team-name">Kenya</td>
+                        <td class="stat">5.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">11</td>
+                        <td class="team-name">Rwanda</td>
+                        <td class="stat">4.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">12</td>
+                        <td class="team-name">Zambia</td>
+                        <td class="stat">4.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">13</td>
+                        <td class="team-name">Mozambique</td>
+                        <td class="stat">4.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">14</td>
+                        <td class="team-name">Tanzania</td>
+                        <td class="stat">3.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">15</td>
+                        <td class="team-name">Uganda</td>
+                        <td class="stat">3.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">16</td>
+                        <td class="team-name">Pakistan</td>
+                        <td class="stat">3.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">17</td>
+                        <td class="team-name">Thailand</td>
+                        <td class="stat">3.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">18</td>
+                        <td class="team-name">Malaysia</td>
+                        <td class="stat">3.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">19</td>
+                        <td class="team-name">Turkey</td>
+                        <td class="stat">2.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">20</td>
+                        <td class="team-name">Poland</td>
+                        <td class="stat">2.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">21</td>
+                        <td class="team-name">Mexico</td>
+                        <td class="stat">2.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">22</td>
+                        <td class="team-name">Chile</td>
+                        <td class="stat">2.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">23</td>
+                        <td class="team-name">South Korea</td>
+                        <td class="stat">2.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">24</td>
+                        <td class="team-name">United States</td>
+                        <td class="stat">1.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">25</td>
+                        <td class="team-name">Japan</td>
+                        <td class="stat">1.4%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="league-section nba">
+            <h2 class="league-title">🏀 National Basketball Association</h2>
+            <div class="summary">30 entries</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Win %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="stat">1</td>
+                        <td class="team-name">Detroit Pistons</td>
+                        <td class="stat wins">45</td>
+                        <td class="stat losses">15</td>
+                        <td class="stat win-pct">75.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">2</td>
+                        <td class="team-name">Oklahoma City Thunder</td>
+                        <td class="stat wins">48</td>
+                        <td class="stat losses">15</td>
+                        <td class="stat win-pct">76.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">3</td>
+                        <td class="team-name">Cleveland Cavaliers</td>
+                        <td class="stat wins">39</td>
+                        <td class="stat losses">24</td>
+                        <td class="stat win-pct">61.9%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">4</td>
+                        <td class="team-name">Milwaukee Bucks</td>
+                        <td class="stat wins">26</td>
+                        <td class="stat losses">34</td>
+                        <td class="stat win-pct">43.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">5</td>
+                        <td class="team-name">Chicago Bulls</td>
+                        <td class="stat wins">25</td>
+                        <td class="stat losses">37</td>
+                        <td class="stat win-pct">40.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">6</td>
+                        <td class="team-name">Indiana Pacers</td>
+                        <td class="stat wins">15</td>
+                        <td class="stat losses">46</td>
+                        <td class="stat win-pct">24.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">7</td>
+                        <td class="team-name">Orlando Magic</td>
+                        <td class="stat wins">32</td>
+                        <td class="stat losses">28</td>
+                        <td class="stat win-pct">53.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">8</td>
+                        <td class="team-name">Miami Heat</td>
+                        <td class="stat wins">33</td>
+                        <td class="stat losses">29</td>
+                        <td class="stat win-pct">53.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">9</td>
+                        <td class="team-name">Charlotte Hornets</td>
+                        <td class="stat wins">31</td>
+                        <td class="stat losses">31</td>
+                        <td class="stat win-pct">50.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">10</td>
+                        <td class="team-name">Atlanta Hawks</td>
+                        <td class="stat wins">31</td>
+                        <td class="stat losses">31</td>
+                        <td class="stat win-pct">50.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">11</td>
+                        <td class="team-name">Washington Wizards</td>
+                        <td class="stat wins">16</td>
+                        <td class="stat losses">45</td>
+                        <td class="stat win-pct">26.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">12</td>
+                        <td class="team-name">Boston Celtics</td>
+                        <td class="stat wins">41</td>
+                        <td class="stat losses">20</td>
+                        <td class="stat win-pct">67.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">13</td>
+                        <td class="team-name">New York Knicks</td>
+                        <td class="stat wins">40</td>
+                        <td class="stat losses">22</td>
+                        <td class="stat win-pct">64.5%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">14</td>
+                        <td class="team-name">Toronto Raptors</td>
+                        <td class="stat wins">35</td>
+                        <td class="stat losses">26</td>
+                        <td class="stat win-pct">57.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">15</td>
+                        <td class="team-name">Philadelphia 76ers</td>
+                        <td class="stat wins">33</td>
+                        <td class="stat losses">28</td>
+                        <td class="stat win-pct">54.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">16</td>
+                        <td class="team-name">Brooklyn Nets</td>
+                        <td class="stat wins">15</td>
+                        <td class="stat losses">46</td>
+                        <td class="stat win-pct">24.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">17</td>
+                        <td class="team-name">Los Angeles Lakers</td>
+                        <td class="stat wins">37</td>
+                        <td class="stat losses">24</td>
+                        <td class="stat win-pct">60.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">18</td>
+                        <td class="team-name">Phoenix Suns</td>
+                        <td class="stat wins">35</td>
+                        <td class="stat losses">26</td>
+                        <td class="stat win-pct">57.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">19</td>
+                        <td class="team-name">Golden State Warriors</td>
+                        <td class="stat wins">31</td>
+                        <td class="stat losses">30</td>
+                        <td class="stat win-pct">50.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">20</td>
+                        <td class="team-name">LA Clippers</td>
+                        <td class="stat wins">29</td>
+                        <td class="stat losses">31</td>
+                        <td class="stat win-pct">48.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">21</td>
+                        <td class="team-name">Sacramento Kings</td>
+                        <td class="stat wins">14</td>
+                        <td class="stat losses">49</td>
+                        <td class="stat win-pct">22.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">22</td>
+                        <td class="team-name">San Antonio Spurs</td>
+                        <td class="stat wins">44</td>
+                        <td class="stat losses">17</td>
+                        <td class="stat win-pct">72.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">23</td>
+                        <td class="team-name">Houston Rockets</td>
+                        <td class="stat wins">38</td>
+                        <td class="stat losses">22</td>
+                        <td class="stat win-pct">63.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">24</td>
+                        <td class="team-name">Memphis Grizzlies</td>
+                        <td class="stat wins">23</td>
+                        <td class="stat losses">37</td>
+                        <td class="stat win-pct">38.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">25</td>
+                        <td class="team-name">Dallas Mavericks</td>
+                        <td class="stat wins">21</td>
+                        <td class="stat losses">40</td>
+                        <td class="stat win-pct">34.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">26</td>
+                        <td class="team-name">New Orleans Pelicans</td>
+                        <td class="stat wins">19</td>
+                        <td class="stat losses">44</td>
+                        <td class="stat win-pct">30.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">27</td>
+                        <td class="team-name">Denver Nuggets</td>
+                        <td class="stat wins">38</td>
+                        <td class="stat losses">24</td>
+                        <td class="stat win-pct">61.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">28</td>
+                        <td class="team-name">Minnesota Timberwolves</td>
+                        <td class="stat wins">39</td>
+                        <td class="stat losses">23</td>
+                        <td class="stat win-pct">62.9%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">29</td>
+                        <td class="team-name">Portland Trail Blazers</td>
+                        <td class="stat wins">29</td>
+                        <td class="stat losses">33</td>
+                        <td class="stat win-pct">46.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">30</td>
+                        <td class="team-name">Utah Jazz</td>
+                        <td class="stat wins">18</td>
+                        <td class="stat losses">43</td>
+                        <td class="stat win-pct">29.5%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="league-section nfl">
+            <h2 class="league-title">🏈 National Football League</h2>
+            <div class="summary">32 entries</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Win %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="stat">1</td>
+                        <td class="team-name">Seattle Seahawks</td>
+                        <td class="stat wins">14</td>
+                        <td class="stat losses">3</td>
+                        <td class="stat win-pct">82.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">2</td>
+                        <td class="team-name">Denver Broncos</td>
+                        <td class="stat wins">14</td>
+                        <td class="stat losses">3</td>
+                        <td class="stat win-pct">82.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">3</td>
+                        <td class="team-name">New England Patriots</td>
+                        <td class="stat wins">14</td>
+                        <td class="stat losses">3</td>
+                        <td class="stat win-pct">82.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">4</td>
+                        <td class="team-name">Jacksonville Jaguars</td>
+                        <td class="stat wins">13</td>
+                        <td class="stat losses">4</td>
+                        <td class="stat win-pct">76.5%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">5</td>
+                        <td class="team-name">Los Angeles Rams</td>
+                        <td class="stat wins">12</td>
+                        <td class="stat losses">5</td>
+                        <td class="stat win-pct">70.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">6</td>
+                        <td class="team-name">San Francisco 49ers</td>
+                        <td class="stat wins">12</td>
+                        <td class="stat losses">5</td>
+                        <td class="stat win-pct">70.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">7</td>
+                        <td class="team-name">Philadelphia Eagles</td>
+                        <td class="stat wins">11</td>
+                        <td class="stat losses">6</td>
+                        <td class="stat win-pct">64.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">8</td>
+                        <td class="team-name">Chicago Bears</td>
+                        <td class="stat wins">11</td>
+                        <td class="stat losses">6</td>
+                        <td class="stat win-pct">64.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">9</td>
+                        <td class="team-name">Los Angeles Chargers</td>
+                        <td class="stat wins">11</td>
+                        <td class="stat losses">6</td>
+                        <td class="stat win-pct">64.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">10</td>
+                        <td class="team-name">Buffalo Bills</td>
+                        <td class="stat wins">12</td>
+                        <td class="stat losses">5</td>
+                        <td class="stat win-pct">70.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">11</td>
+                        <td class="team-name">Houston Texans</td>
+                        <td class="stat wins">12</td>
+                        <td class="stat losses">5</td>
+                        <td class="stat win-pct">70.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">12</td>
+                        <td class="team-name">Pittsburgh Steelers</td>
+                        <td class="stat wins">10</td>
+                        <td class="stat losses">7</td>
+                        <td class="stat win-pct">58.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">13</td>
+                        <td class="team-name">Indianapolis Colts</td>
+                        <td class="stat wins">8</td>
+                        <td class="stat losses">9</td>
+                        <td class="stat win-pct">47.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">14</td>
+                        <td class="team-name">Minnesota Vikings</td>
+                        <td class="stat wins">9</td>
+                        <td class="stat losses">8</td>
+                        <td class="stat win-pct">52.9%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">15</td>
+                        <td class="team-name">Green Bay Packers</td>
+                        <td class="stat wins">9</td>
+                        <td class="stat losses">7</td>
+                        <td class="stat win-pct">56.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">16</td>
+                        <td class="team-name">Detroit Lions</td>
+                        <td class="stat wins">9</td>
+                        <td class="stat losses">8</td>
+                        <td class="stat win-pct">52.9%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">17</td>
+                        <td class="team-name">Tampa Bay Buccaneers</td>
+                        <td class="stat wins">8</td>
+                        <td class="stat losses">9</td>
+                        <td class="stat win-pct">47.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">18</td>
+                        <td class="team-name">Atlanta Falcons</td>
+                        <td class="stat wins">8</td>
+                        <td class="stat losses">9</td>
+                        <td class="stat win-pct">47.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">19</td>
+                        <td class="team-name">Carolina Panthers</td>
+                        <td class="stat wins">8</td>
+                        <td class="stat losses">9</td>
+                        <td class="stat win-pct">47.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">20</td>
+                        <td class="team-name">Baltimore Ravens</td>
+                        <td class="stat wins">8</td>
+                        <td class="stat losses">9</td>
+                        <td class="stat win-pct">47.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">21</td>
+                        <td class="team-name">Miami Dolphins</td>
+                        <td class="stat wins">7</td>
+                        <td class="stat losses">10</td>
+                        <td class="stat win-pct">41.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">22</td>
+                        <td class="team-name">New Orleans Saints</td>
+                        <td class="stat wins">6</td>
+                        <td class="stat losses">11</td>
+                        <td class="stat win-pct">35.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">23</td>
+                        <td class="team-name">Washington Commanders</td>
+                        <td class="stat wins">5</td>
+                        <td class="stat losses">12</td>
+                        <td class="stat win-pct">29.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">24</td>
+                        <td class="team-name">Dallas Cowboys</td>
+                        <td class="stat wins">7</td>
+                        <td class="stat losses">9</td>
+                        <td class="stat win-pct">43.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">25</td>
+                        <td class="team-name">Cincinnati Bengals</td>
+                        <td class="stat wins">6</td>
+                        <td class="stat losses">11</td>
+                        <td class="stat win-pct">35.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">26</td>
+                        <td class="team-name">Cleveland Browns</td>
+                        <td class="stat wins">5</td>
+                        <td class="stat losses">12</td>
+                        <td class="stat win-pct">29.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">27</td>
+                        <td class="team-name">Kansas City Chiefs</td>
+                        <td class="stat wins">6</td>
+                        <td class="stat losses">11</td>
+                        <td class="stat win-pct">35.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">28</td>
+                        <td class="team-name">New York Jets</td>
+                        <td class="stat wins">3</td>
+                        <td class="stat losses">14</td>
+                        <td class="stat win-pct">17.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">29</td>
+                        <td class="team-name">Las Vegas Raiders</td>
+                        <td class="stat wins">3</td>
+                        <td class="stat losses">14</td>
+                        <td class="stat win-pct">17.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">30</td>
+                        <td class="team-name">Tennessee Titans</td>
+                        <td class="stat wins">3</td>
+                        <td class="stat losses">14</td>
+                        <td class="stat win-pct">17.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">31</td>
+                        <td class="team-name">New York Giants</td>
+                        <td class="stat wins">4</td>
+                        <td class="stat losses">13</td>
+                        <td class="stat win-pct">23.5%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">32</td>
+                        <td class="team-name">Arizona Cardinals</td>
+                        <td class="stat wins">3</td>
+                        <td class="stat losses">14</td>
+                        <td class="stat win-pct">17.6%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="league-section olympics">
+            <h2 class="league-title">🏅 2026 Olympics - Total Medal Count</h2>
+            <div class="summary">25 entries</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Gold</th>
+                        <th>Silver</th>
+                        <th>Bronze</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="stat">1</td>
+                        <td class="team-name">Norway</td>
+                        <td class="stat">28</td>
+                        <td class="stat">18</td>
+                        <td class="stat">14</td>
+                        <td class="stat" style="font-weight: bold;">60</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">2</td>
+                        <td class="team-name">Austria</td>
+                        <td class="stat">16</td>
+                        <td class="stat">12</td>
+                        <td class="stat">10</td>
+                        <td class="stat" style="font-weight: bold;">38</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">3</td>
+                        <td class="team-name">Switzerland</td>
+                        <td class="stat">14</td>
+                        <td class="stat">11</td>
+                        <td class="stat">9</td>
+                        <td class="stat" style="font-weight: bold;">34</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">4</td>
+                        <td class="team-name">Sweden</td>
+                        <td class="stat">12</td>
+                        <td class="stat">9</td>
+                        <td class="stat">8</td>
+                        <td class="stat" style="font-weight: bold;">29</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">5</td>
+                        <td class="team-name">Russia</td>
+                        <td class="stat">11</td>
+                        <td class="stat">8</td>
+                        <td class="stat">7</td>
+                        <td class="stat" style="font-weight: bold;">26</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">6</td>
+                        <td class="team-name">Germany</td>
+                        <td class="stat">10</td>
+                        <td class="stat">8</td>
+                        <td class="stat">6</td>
+                        <td class="stat" style="font-weight: bold;">24</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">7</td>
+                        <td class="team-name">Italy</td>
+                        <td class="stat">9</td>
+                        <td class="stat">7</td>
+                        <td class="stat">5</td>
+                        <td class="stat" style="font-weight: bold;">21</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">8</td>
+                        <td class="team-name">France</td>
+                        <td class="stat">8</td>
+                        <td class="stat">6</td>
+                        <td class="stat">5</td>
+                        <td class="stat" style="font-weight: bold;">19</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">9</td>
+                        <td class="team-name">Japan</td>
+                        <td class="stat">7</td>
+                        <td class="stat">5</td>
+                        <td class="stat">4</td>
+                        <td class="stat" style="font-weight: bold;">16</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">10</td>
+                        <td class="team-name">South Korea</td>
+                        <td class="stat">6</td>
+                        <td class="stat">4</td>
+                        <td class="stat">3</td>
+                        <td class="stat" style="font-weight: bold;">13</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">11</td>
+                        <td class="team-name">Great Britain</td>
+                        <td class="stat">5</td>
+                        <td class="stat">4</td>
+                        <td class="stat">3</td>
+                        <td class="stat" style="font-weight: bold;">12</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">12</td>
+                        <td class="team-name">Canada</td>
+                        <td class="stat">4</td>
+                        <td class="stat">3</td>
+                        <td class="stat">3</td>
+                        <td class="stat" style="font-weight: bold;">10</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">13</td>
+                        <td class="team-name">Czech Republic</td>
+                        <td class="stat">3</td>
+                        <td class="stat">2</td>
+                        <td class="stat">2</td>
+                        <td class="stat" style="font-weight: bold;">7</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">14</td>
+                        <td class="team-name">Netherlands</td>
+                        <td class="stat">3</td>
+                        <td class="stat">2</td>
+                        <td class="stat">2</td>
+                        <td class="stat" style="font-weight: bold;">7</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">15</td>
+                        <td class="team-name">Poland</td>
+                        <td class="stat">2</td>
+                        <td class="stat">2</td>
+                        <td class="stat">1</td>
+                        <td class="stat" style="font-weight: bold;">5</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">16</td>
+                        <td class="team-name">United States</td>
+                        <td class="stat">2</td>
+                        <td class="stat">2</td>
+                        <td class="stat">1</td>
+                        <td class="stat" style="font-weight: bold;">5</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">17</td>
+                        <td class="team-name">China</td>
+                        <td class="stat">2</td>
+                        <td class="stat">1</td>
+                        <td class="stat">1</td>
+                        <td class="stat" style="font-weight: bold;">4</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">18</td>
+                        <td class="team-name">Spain</td>
+                        <td class="stat">1</td>
+                        <td class="stat">1</td>
+                        <td class="stat">1</td>
+                        <td class="stat" style="font-weight: bold;">3</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">19</td>
+                        <td class="team-name">Belgium</td>
+                        <td class="stat">1</td>
+                        <td class="stat">1</td>
+                        <td class="stat">1</td>
+                        <td class="stat" style="font-weight: bold;">3</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">20</td>
+                        <td class="team-name">Australia</td>
+                        <td class="stat">1</td>
+                        <td class="stat">0</td>
+                        <td class="stat">0</td>
+                        <td class="stat" style="font-weight: bold;">1</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">21</td>
+                        <td class="team-name">Finland</td>
+                        <td class="stat">1</td>
+                        <td class="stat">0</td>
+                        <td class="stat">0</td>
+                        <td class="stat" style="font-weight: bold;">1</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">22</td>
+                        <td class="team-name">Slovenia</td>
+                        <td class="stat">0</td>
+                        <td class="stat">1</td>
+                        <td class="stat">0</td>
+                        <td class="stat" style="font-weight: bold;">1</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">23</td>
+                        <td class="team-name">Uzbekistan</td>
+                        <td class="stat">0</td>
+                        <td class="stat">1</td>
+                        <td class="stat">0</td>
+                        <td class="stat" style="font-weight: bold;">1</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">24</td>
+                        <td class="team-name">Mongolia</td>
+                        <td class="stat">0</td>
+                        <td class="stat">0</td>
+                        <td class="stat">1</td>
+                        <td class="stat" style="font-weight: bold;">1</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">25</td>
+                        <td class="team-name">Ukraine</td>
+                        <td class="stat">0</td>
+                        <td class="stat">0</td>
+                        <td class="stat">1</td>
+                        <td class="stat" style="font-weight: bold;">1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="league-section stock">
+            <h2 class="league-title">📈 S&P 500 - 2026 YTD Gain - Top 25</h2>
+            <div class="summary">25 entries</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>YTD Gain %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="stat">1</td>
+                        <td class="team-name">Nvidia</td>
+                        <td class="stat">48.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">2</td>
+                        <td class="team-name">Tesla</td>
+                        <td class="stat">42.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">3</td>
+                        <td class="team-name">Meta Platforms</td>
+                        <td class="stat">39.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">4</td>
+                        <td class="team-name">Broadcom</td>
+                        <td class="stat">35.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">5</td>
+                        <td class="team-name">Eli Lilly</td>
+                        <td class="stat">31.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">6</td>
+                        <td class="team-name">UnitedHealth Group</td>
+                        <td class="stat">28.9%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">7</td>
+                        <td class="team-name">JPMorgan Chase</td>
+                        <td class="stat">26.5%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">8</td>
+                        <td class="team-name">Goldman Sachs</td>
+                        <td class="stat">24.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">9</td>
+                        <td class="team-name">Bank of America</td>
+                        <td class="stat">23.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">10</td>
+                        <td class="team-name">Visa</td>
+                        <td class="stat">21.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">11</td>
+                        <td class="team-name">Mastercard</td>
+                        <td class="stat">19.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">12</td>
+                        <td class="team-name">Amazon</td>
+                        <td class="stat">18.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">13</td>
+                        <td class="team-name">Alphabet</td>
+                        <td class="stat">17.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">14</td>
+                        <td class="team-name">Apple</td>
+                        <td class="stat">16.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">15</td>
+                        <td class="team-name">Microsoft</td>
+                        <td class="stat">15.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">16</td>
+                        <td class="team-name">Berkshire Hathaway</td>
+                        <td class="stat">14.5%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">17</td>
+                        <td class="team-name">Morgan Stanley</td>
+                        <td class="stat">13.2%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">18</td>
+                        <td class="team-name">Salesforce</td>
+                        <td class="stat">12.4%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">19</td>
+                        <td class="team-name">Accenture</td>
+                        <td class="stat">11.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">20</td>
+                        <td class="team-name">Paypal</td>
+                        <td class="stat">10.3%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">21</td>
+                        <td class="team-name">Adobe</td>
+                        <td class="stat">9.5%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">22</td>
+                        <td class="team-name">Qualcomm</td>
+                        <td class="stat">8.7%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">23</td>
+                        <td class="team-name">Intel</td>
+                        <td class="stat">7.9%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">24</td>
+                        <td class="team-name">Chevron</td>
+                        <td class="stat">7.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="stat">25</td>
+                        <td class="team-name">Exxon Mobil</td>
+                        <td class="stat">6.3%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>🏆 Comprehensive Sports Rankings Database</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">Data provided by SportRadar API • All times in EST</p>
+        </div>
+    </div>
+</body>
+</html>
